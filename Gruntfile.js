@@ -9,8 +9,16 @@ module.exports = function(grunt){
           'angular-css/client.css': 'scss/client.scss',       // 'destination': 'source'
         }
       }
+    },
+    watch: {
+      css: {
+        files: ['scss/**/*.scss'],
+        tasks: ['sass']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
 }
