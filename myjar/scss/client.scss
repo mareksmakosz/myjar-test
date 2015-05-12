@@ -118,34 +118,49 @@ $brand-yellow--darken: darken($brand-yellow, 10%);
 	// Background helper classes
 	.bg--blue {
 		background-color: $brand-blue;
+		.bg--lighten {
+			background-color: $brand-blue--lighten;
+		}
+		.vantageslider__handle,
+		.vantageslider__handle:active,
+		.number-box,
+		.bg--darken {
+			background-color: $brand-blue--darken;
+		}
 	}
-	.bg--blue--lighten {
-		background-color: $brand-blue--lighten;
-	}
-	a.bg--blue:hover,
-	.bg--blue--darken {
+	a.bg--blue:hover {
 		background-color: $brand-blue--darken;
 	}
 
 	.bg--green {
 		background-color: $brand-green;
+		.bg--lighten {
+			background-color: $brand-green--lighten;
+		}
+		.vantageslider__handle,
+		.vantageslider__handle:active,
+		.number-box,
+		.bg--darken {
+			background-color: $brand-green--darken;
+		}
 	}
-	.bg--green--lighten {
-		background-color: $brand-green--lighten;
-	}
-	a.bg--green:hover,
-	.bg--green--darken {
+	a.bg--green:hover {
 		background-color: $brand-green--darken;
 	}
 
 	.bg--yellow {
 		background-color: $brand-yellow;
+		.bg--lighten {
+			background-color: $brand-yellow--lighten;
+		}
+		.vantageslider__handle,
+		.vantageslider__handle:active,
+		.number-box,
+		.bg--darken {
+			background-color: $brand-yellow--darken;
+		}
 	}
-	.bg--yellow--lighten {
-		background-color: $brand-yellow--lighten;
-	}
-	a.bg--yellow:hover,
-	.bg--yellow--darken {
+	a.bg--yellow:hover {
 		background-color: $brand-yellow--darken;
 	}
 
@@ -248,7 +263,7 @@ $brand-yellow--darken: darken($brand-yellow, 10%);
 							}
 
 							.number-box {
-								background-color: #96d2f0;
+								// background-color: #96d2f0;
 								border-radius: 6px;
 								font-size: 30px;
 								color: #fff;
@@ -377,7 +392,8 @@ $brand-yellow--darken: darken($brand-yellow, 10%);
 						.vantageslider__handle {
 							background: #5B5F61;
 							&:active {
-								background: #5B5F61 !important;
+								// background: #5B5F61 !important;
+								background: #5B5F61;
 							}
 						}
 						.vantageslider, .vantageslider__fill {

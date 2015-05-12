@@ -212,7 +212,8 @@
 	transition: all 0ms;
 }
 .vantageslider__handle:active {
-	background: #96d2f0 !important;
+	/*background: #96d2f0 !important;*/
+	background: #96d2f0;
 }
 .pound .vantageslider__handle:after {
 	content: '£';

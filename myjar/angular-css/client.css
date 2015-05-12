@@ -88,31 +88,46 @@
 .mj-tabpanel .bg--blue {
   background-color: #96d2f0;
 }
-.mj-tabpanel .bg--blue--lighten {
+.mj-tabpanel .bg--blue .bg--lighten {
   background-color: #c3e5f6;
 }
-.mj-tabpanel a.bg--blue:hover,
-.mj-tabpanel .bg--blue--darken {
+.mj-tabpanel .bg--blue .vantageslider__handle,
+.mj-tabpanel .bg--blue .vantageslider__handle:active,
+.mj-tabpanel .bg--blue .number-box,
+.mj-tabpanel .bg--blue .bg--darken {
+  background-color: #69bfea;
+}
+.mj-tabpanel a.bg--blue:hover {
   background-color: #69bfea;
 }
 .mj-tabpanel .bg--green {
   background-color: #a0c896;
 }
-.mj-tabpanel .bg--green--lighten {
+.mj-tabpanel .bg--green .bg--lighten {
   background-color: #bedab7;
 }
-.mj-tabpanel a.bg--green:hover,
-.mj-tabpanel .bg--green--darken {
+.mj-tabpanel .bg--green .vantageslider__handle,
+.mj-tabpanel .bg--green .vantageslider__handle:active,
+.mj-tabpanel .bg--green .number-box,
+.mj-tabpanel .bg--green .bg--darken {
+  background-color: #82b675;
+}
+.mj-tabpanel a.bg--green:hover {
   background-color: #82b675;
 }
 .mj-tabpanel .bg--yellow {
   background-color: #dcd787;
 }
-.mj-tabpanel .bg--yellow--lighten {
+.mj-tabpanel .bg--yellow .bg--lighten {
   background-color: #e8e4ae;
 }
-.mj-tabpanel a.bg--yellow:hover,
-.mj-tabpanel .bg--yellow--darken {
+.mj-tabpanel .bg--yellow .vantageslider__handle,
+.mj-tabpanel .bg--yellow .vantageslider__handle:active,
+.mj-tabpanel .bg--yellow .number-box,
+.mj-tabpanel .bg--yellow .bg--darken {
+  background-color: #d0ca60;
+}
+.mj-tabpanel a.bg--yellow:hover {
   background-color: #d0ca60;
 }
 
@@ -210,7 +225,6 @@
   opacity: 1;
 }
 .vantage-request .request-body .schedule-body .instalment-container .instalment-boxes ul li.instal-box .number-box {
-  background-color: #96d2f0;
   border-radius: 6px;
   font-size: 30px;
   color: #fff;
@@ -320,7 +334,7 @@
   background: #5B5F61;
 }
 .vantage-request .request-body .borrow-body .borrow-slider .slider-container.inactive .vantageslider__handle:active {
-  background: #5B5F61 !important;
+  background: #5B5F61;
 }
 .vantage-request .request-body .borrow-body .borrow-slider .slider-container.inactive .vantageslider, .vantage-request .request-body .borrow-body .borrow-slider .slider-container.inactive .vantageslider__fill {
   background-color: #8e8e8e;
