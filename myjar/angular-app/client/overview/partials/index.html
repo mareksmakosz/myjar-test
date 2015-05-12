@@ -9,16 +9,24 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="request-body">
-					<div class="row " role="tabpanel">
-						<ul class="nav nav-tabs nav-justified">
-						    <li ng-class="{active: tab == 'oneMonth' || !tab}"><a ng-click="tab = 'oneMonth'">1 Month</a></li>
-						</ul>
-
-						<!-- 1 Month -->
-						<div ng-show="tab == 'oneMonth' || !tab">
+		<div class="row mj-tabpanel" role="tabpanel">
+			<ul class="nav nav-tabs nav-justified mj-nav-tabs">
+			    <li ng-class="{active: tab == 'oneMonth' || !tab}">
+			    	<a class="mj-nav-tabs__link bg--blue" ng-click="tab = 'oneMonth'" href="">1 Month</a>
+		    	</li>
+			    <li ng-class="{active: tab == 'twoMonth'}">
+			    	<a class="mj-nav-tabs__link bg--green" ng-click="tab = 'twoMonth'" href="">2 Months</a>
+		    	</li>
+			    <li ng-class="{active: tab == 'threeMonth'}">
+			    	<a class="mj-nav-tabs__link bg--yellow" ng-click="tab = 'threeMonth'" href="">3 Months</a>
+		    	</li>
+			</ul>
+			<!-- 1 Month -->
+			<div class="vantage-request__tab" ng-show="tab == 'oneMonth' || !tab">
+				
+				<div class="col-md-12">
+					<div class="request-body bg--blue">
+						<div class="row">
 							<div class="col-md-6">
 								<!-- Vantage request left body -->
 								<div ng-include src="'/myjar/angular-app/client/overview/sections/vantage/request/borrow_body.html'"></div>
@@ -40,6 +48,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
