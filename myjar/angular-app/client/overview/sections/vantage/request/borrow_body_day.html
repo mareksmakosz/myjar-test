@@ -1,2 +1,6 @@
 <h2>[[ exampleLoan ? 'LOANS UP TO 3 MONTHS' : 'I am borrowing for']]</h2>
-<div slider="day" class="borrow-slider day"></div>
+<div ng-if="productKey === '1month'" slider="day" class="borrow-slider day"></div>
+<div ng-if="productKey !== '1month'" class="borrow-slider day">
+    <h2 class="large">[[ product.name ]]</h2>
+    <p>Loan due date: <strong>[[earlierPaymentDate | instalmentDateFormat]]</strong></p>
+</div>
