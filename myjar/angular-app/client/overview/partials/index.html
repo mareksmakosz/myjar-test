@@ -11,21 +11,19 @@
 		</div>
 		<div class="row mj-tabpanel" role="tabpanel">
 			<ul class="nav nav-tabs nav-justified mj-nav-tabs">
-			    <li ng-class="{active: tab == 'oneMonth' || !tab}">
-			    	<a class="mj-nav-tabs__link bg--blue" ng-click="tab = 'oneMonth'" href="">1 Month</a>
-		    	</li>
-			    <li ng-class="{active: tab == 'twoMonth'}">
-			    	<a class="mj-nav-tabs__link bg--green" ng-click="tab = 'twoMonth'" href="">2 Months</a>
-		    	</li>
-			    <li ng-class="{active: tab == 'threeMonth'}">
-			    	<a class="mj-nav-tabs__link bg--yellow" ng-click="tab = 'threeMonth'" href="">3 Months</a>
+			    <li ng-class="{active: tabs.activeTab == $index}" ng-repeat="product in productData">
+			    	<a ng-class="{'bg--blue' : $index == 0, 'bg--green' : $index == 1, 'bg--yellow' : $index == 2}"
+					   class="mj-nav-tabs__link bg--blue"
+					   ng-click="tabs.activeTab = $index" href="">[[ product.name ]]</a>
 		    	</li>
 			</ul>
 			<!-- 1 Month -->
-			<div class="vantage-request__tab" ng-show="tab == 'oneMonth' || !tab">
+			<div class="vantage-request__tab"
+				 ng-show="tabs.activeTab == $index"
+				 ng-repeat="product in productData">
 				
 				<div class="col-md-12">
-					<div class="request-body bg--blue">
+					<div class="request-body" ng-class="{'bg--blue' : $index == 0, 'bg--green' : $index == 1, 'bg--yellow' : $index == 2}">
 						<div class="row">
 							<div class="col-md-6">
 								<!-- Vantage request left body -->

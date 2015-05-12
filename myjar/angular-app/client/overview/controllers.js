@@ -6,14 +6,17 @@ angular.module('client.overview.controllers', []).
 
 	controller('ClientOverviewController',
 		['$scope', '$rootScope', 'loanFactory', 'clientFactory', 'ModalService', function($scope, $rootScope, loanFactory, clientFactory, ModalService) {
+			$scope.tabs = {
+				activeTab: 0
+			};
 
 			// Get inital data
 			clientFactory.getLoanRequestData().success(function (data) {
-				console.log(data);
 				$scope.creditLimit = data.loan_request.credit_limit;
 				$scope.loanDuration = moment(data.loan_request.maximum_duration_date, "YYYY-MM-DD").diff(moment().startOf('day'), 'days');
 				$scope.nextIncomeDate = data.next_income_date;
 				$scope.productData = JSON.parse(data.loan_request.limits_per_duration_json);
+				console.log($scope.productData);
 			});
 
 			$scope.creditLimit = $scope.loanRequestData.data.loan_request.credit_limit;
