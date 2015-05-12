@@ -62,7 +62,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.mj-tabpanel .mj-nav-tabs .active a.mj-nav-tabs__link, .mj-tabpanel .mj-nav-tabs .active:active, .mj-tabpanel .mj-nav-tabs .active:focus {
+.mj-tabpanel .mj-nav-tabs .active a.mj-nav-tabs__link {
   padding: 10px 15px;
   color: #fff;
   border-width: 3px;
@@ -336,6 +336,19 @@
   }
   .vantage-request .request-body .schedule-body .schedule-container .instalment-container {
     height: 290px;
+  }
+}
+@media (max-width: 991px) and (min-width: 320px) {
+  .vantage-request .mj-nav-tabs {
+    margin: 0 auto;
+    margin-bottom: -3px;
+    padding: 0 40px;
+    max-width: 550px;
+    min-width: 410px;
+  }
+  .vantage-request .mj-nav-tabs > li {
+    display: table-cell;
+    width: 1%;
   }
 }
 
