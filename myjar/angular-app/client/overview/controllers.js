@@ -10,21 +10,20 @@ angular.module('client.overview.controllers', []).
 				activeTab: 0
 			};
 
-			// Get inital data
-			clientFactory.getLoanRequestData().success(function (data) {
-				$scope.creditLimit = data.loan_request.credit_limit;
-				$scope.loanDuration = moment(data.loan_request.maximum_duration_date, "YYYY-MM-DD").diff(moment().startOf('day'), 'days');
-				$scope.nextIncomeDate = data.next_income_date;
-				$scope.productData = JSON.parse(data.loan_request.limits_per_duration_json);
-				console.log($scope.productData);
-			});
-
 			$scope.creditLimit = $scope.loanRequestData.data.loan_request.credit_limit;
 			$scope.loanDuration = moment($scope.loanRequestData.data.loan_request.maximum_duration_date, "YYYY-MM-DD").diff(moment().startOf('day'), 'days');
 			$scope.nextIncomeDate = $scope.loanRequestData.data.next_income_date;
 			$scope.productData = JSON.parse($scope.loanRequestData.data.loan_request.limits_per_duration_json);
 			$scope.instalments = [],
 			$scope.loanRequestInfo = {};
+
+			// Get inital data
+			clientFactory.getLoanRequestData().success(function (data) {
+				$scope.creditLimit = data.loan_request.credit_limit;
+				$scope.loanDuration = moment(data.loan_request.maximum_duration_date, "YYYY-MM-DD").diff(moment().startOf('day'), 'days');
+				$scope.nextIncomeDate = data.next_income_date;
+				$scope.productData = JSON.parse(data.loan_request.limits_per_duration_json);
+			});
 
 			$scope.selectedProduct = '3month';
 
