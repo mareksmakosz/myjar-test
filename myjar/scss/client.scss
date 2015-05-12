@@ -85,6 +85,7 @@ $brand-yellow--darken: darken($brand-yellow, 10%);
 		.mj-nav-tabs__link {
 			padding: 8px 15px;
 			margin: 0 2px;
+			font-size: 14px;
 			color: #fff;
 			border-width: 3px;
 			border-color: #fff;
@@ -411,7 +412,7 @@ $brand-yellow--darken: darken($brand-yellow, 10%);
 
 	@media (max-width: 991px) {
 		.request-body {
-			height: 100%;
+			height: auto;
 			max-width: 550px;
 			min-width: 410px;
 
